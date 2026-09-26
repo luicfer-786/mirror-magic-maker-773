@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -25,26 +25,37 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   const [frameHeight, setFrameHeight] = useState(5640);
-  const observerRef = useRef<ResizeObserver | null>(null);
+  const frameRef = useRef<HTMLIFrameElement>(null);
+
+  useEffect(() => {
+    const frame = frameRef.current;
+    if (!frame) return;
+    let observer: ResizeObserver | undefined;
+    const measure = () => {
+      const content = frame.contentDocument?.querySelector("x-dc > div");
+      if (!content) return;
+      observer?.disconnect();
+      const updateHeight = () => setFrameHeight(content.scrollHeight);
+      updateHeight();
+      observer = new ResizeObserver(updateHeight);
+      observer.observe(content);
+    };
+    frame.addEventListener("load", measure);
+    measure();
+    return () => {
+      frame.removeEventListener("load", measure);
+      observer?.disconnect();
+    };
+  }, []);
 
   return (
     <main className="homse-page">
       <iframe
+        ref={frameRef}
         className="homse-frame"
         src="/homse/index.html"
         title="Homse home services"
         style={{ height: frameHeight }}
-        onLoad={(event) => {
-          const frame = event.currentTarget;
-          const body = frame.contentDocument?.body;
-          const content = frame.contentDocument?.querySelector("x-dc > div");
-          if (!body || !content) return;
-          observerRef.current?.disconnect();
-          const updateHeight = () => setFrameHeight(content.scrollHeight);
-          updateHeight();
-          observerRef.current = new ResizeObserver(updateHeight);
-          observerRef.current.observe(content);
-        }}
       />
     </main>
   );
