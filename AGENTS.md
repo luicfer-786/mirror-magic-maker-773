@@ -10,3 +10,4 @@
 <!-- LOVABLE:END -->
 
 - Preserve the supplied Homse page as a self-contained static design embedded by the TanStack home route, because the uploaded artifact is the visual source of truth.
+- Use the supplied mobile design as a separate static page below 768px while retaining the desktop design above it, because the phone artboard has distinct composition and assets.

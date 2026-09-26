@@ -157,3 +157,12 @@
   border: 0;
   margin-inline: auto;
 }
+
+.homse-mobile {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .homse-desktop { display: none; }
+  .homse-mobile { display: block; }
+}
