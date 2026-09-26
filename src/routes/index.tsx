@@ -1,24 +1,68 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useEffect, useRef, useState } from "react";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Homse — Home services, done right" },
+      {
+        name: "description",
+        content:
+          "Book verified professionals for cleaning, salon, repairs and appliance services with clear prices and pay-after-service convenience.",
+      },
+      { property: "og:title", content: "Homse — Home services, done right" },
+      {
+        property: "og:description",
+        content:
+          "Verified home-service professionals, upfront prices, and payment only after the job is done.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
+  const [frameHeight, setFrameHeight] = useState(5640);
+  const frameRef = useRef<HTMLIFrameElement>(null);
+
+  useEffect(() => {
+    const frame = frameRef.current;
+    if (!frame) return;
+    let observer: ResizeObserver | undefined;
+    const measure = () => {
+      const content = frame.contentDocument?.querySelector("x-dc > div");
+      if (!content) return;
+      observer?.disconnect();
+      const updateHeight = () => setFrameHeight(content.scrollHeight);
+      updateHeight();
+      observer = new ResizeObserver(updateHeight);
+      observer.observe(content);
+    };
+    frame.addEventListener("load", measure);
+    measure();
+    return () => {
+      frame.removeEventListener("load", measure);
+      observer?.disconnect();
+    };
+  }, []);
+
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
+    <main className="homse-page">
+      <iframe
+        ref={frameRef}
+        className="homse-frame"
+        src="/homse/index.html"
+        title="Homse home services"
+        style={{ height: frameHeight }}
+        onLoad={() => {
+          window.setTimeout(() => {
+            const content = frameRef.current?.contentDocument?.querySelector("x-dc > div");
+            if (content) setFrameHeight(content.scrollHeight);
+          }, 0);
+        }}
       />
-    </div>
+    </main>
   );
 }
