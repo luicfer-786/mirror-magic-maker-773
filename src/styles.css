@@ -146,21 +146,14 @@
 
 .homse-page {
   min-height: 100vh;
-  overflow-x: auto;
+  overflow-x: hidden;
   background: var(--color-background);
 }
 
 .homse-frame {
   display: block;
-  width: 1440px;
-  min-width: 1440px;
-  height: 5640px;
+  width: 100%;
+  max-width: 1440px;
   border: 0;
   margin-inline: auto;
-}
-
-@media (max-width: 1439px) {
-  .homse-frame {
-    margin-inline: 0;
-  }
 }

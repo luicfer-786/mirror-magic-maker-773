@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useRef, useState } from "react";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -23,12 +24,26 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
+  const [frameHeight, setFrameHeight] = useState(5640);
+  const observerRef = useRef<ResizeObserver | null>(null);
+
   return (
     <main className="homse-page">
       <iframe
         className="homse-frame"
         src="/homse/index.html"
         title="Homse home services"
+        style={{ height: frameHeight }}
+        onLoad={(event) => {
+          const frame = event.currentTarget;
+          const body = frame.contentDocument?.body;
+          if (!body) return;
+          observerRef.current?.disconnect();
+          const updateHeight = () => setFrameHeight(body.scrollHeight);
+          updateHeight();
+          observerRef.current = new ResizeObserver(updateHeight);
+          observerRef.current.observe(body);
+        }}
       />
     </main>
   );
