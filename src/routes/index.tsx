@@ -56,6 +56,12 @@ function Index() {
         src="/homse/index.html"
         title="Homse home services"
         style={{ height: frameHeight }}
+        onLoad={() => {
+          window.setTimeout(() => {
+            const content = frameRef.current?.contentDocument?.querySelector("x-dc > div");
+            if (content) setFrameHeight(content.scrollHeight);
+          }, 0);
+        }}
       />
     </main>
   );
