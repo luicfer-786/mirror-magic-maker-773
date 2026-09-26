@@ -24,7 +24,16 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
-  const [frameHeight, setFrameHeight] = useState(5640);
+  return (
+    <main className="homse-page">
+      <DesignFrame className="homse-desktop" src="/homse/index.html" initialHeight={5640} title="Homse home services" />
+      <DesignFrame className="homse-mobile" src="/homse-mobile/index.html" initialHeight={6000} title="Homse mobile home services" />
+    </main>
+  );
+}
+
+function DesignFrame({ className, src, initialHeight, title }: { className: string; src: string; initialHeight: number; title: string }) {
+  const [frameHeight, setFrameHeight] = useState(initialHeight);
   const frameRef = useRef<HTMLIFrameElement>(null);
 
   useEffect(() => {
@@ -32,7 +41,7 @@ function Index() {
     if (!frame) return;
     let observer: ResizeObserver | undefined;
     const measure = () => {
-      const content = frame.contentDocument?.querySelector("x-dc > div");
+      const content = frame.contentDocument?.querySelector("x-dc > div, .mobile-canvas");
       if (!content) return;
       observer?.disconnect();
       const updateHeight = () => setFrameHeight(content.scrollHeight);
@@ -49,20 +58,18 @@ function Index() {
   }, []);
 
   return (
-    <main className="homse-page">
-      <iframe
-        ref={frameRef}
-        className="homse-frame"
-        src="/homse/index.html"
-        title="Homse home services"
-        style={{ height: frameHeight }}
-        onLoad={() => {
-          window.setTimeout(() => {
-            const content = frameRef.current?.contentDocument?.querySelector("x-dc > div");
-            if (content) setFrameHeight(content.scrollHeight);
-          }, 0);
-        }}
-      />
-    </main>
+    <iframe
+      ref={frameRef}
+      className={`homse-frame ${className}`}
+      src={src}
+      title={title}
+      style={{ height: frameHeight }}
+      onLoad={() => {
+        window.setTimeout(() => {
+          const content = frameRef.current?.contentDocument?.querySelector("x-dc > div, .mobile-canvas");
+          if (content) setFrameHeight(content.scrollHeight);
+        }, 0);
+      }}
+    />
   );
 }
