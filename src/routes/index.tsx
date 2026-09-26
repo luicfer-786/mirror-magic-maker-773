@@ -37,12 +37,13 @@ function Index() {
         onLoad={(event) => {
           const frame = event.currentTarget;
           const body = frame.contentDocument?.body;
-          if (!body) return;
+          const content = frame.contentDocument?.querySelector("x-dc > div");
+          if (!body || !content) return;
           observerRef.current?.disconnect();
-          const updateHeight = () => setFrameHeight(body.scrollHeight);
+          const updateHeight = () => setFrameHeight(content.scrollHeight);
           updateHeight();
           observerRef.current = new ResizeObserver(updateHeight);
-          observerRef.current.observe(body);
+          observerRef.current.observe(content);
         }}
       />
     </main>
