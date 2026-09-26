@@ -140,5 +140,27 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    margin: 0;
+  }
+}
+
+.homse-page {
+  min-height: 100vh;
+  overflow-x: auto;
+  background: var(--color-background);
+}
+
+.homse-frame {
+  display: block;
+  width: 1440px;
+  min-width: 1440px;
+  height: 5640px;
+  border: 0;
+  margin-inline: auto;
+}
+
+@media (max-width: 1439px) {
+  .homse-frame {
+    margin-inline: 0;
   }
 }

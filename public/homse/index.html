@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<title>Homse — Landing page</title>
+
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<style>/* cyrillic-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: italic;
+  font-weight: 800;
+  font-display: swap;
+  src: url("/homse/ff92d5fe-a059-4c22-afd0-f255ee7edc16.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: italic;
+  font-weight: 800;
+  font-display: swap;
+  src: url("/homse/bfb43b72-b8f5-4950-87bf-4ad225d3f625.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: italic;
+  font-weight: 800;
+  font-display: swap;
+  src: url("/homse/479837ae-c4a2-4225-8fcc-2570bf469d79.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: italic;
+  font-weight: 800;
+  font-display: swap;
+  src: url("/homse/b359f178-f81e-44c9-8708-197ffb322cea.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/homse/581b427e-e028-42b1-965c-70fe0dd82e6c.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/homse/c12db2d8-e8db-42d9-8ad4-af849458a6d8.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/homse/346c70c8-385a-4ccd-aea0-087587ec9ba7.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/homse/09e0ed97-73c9-4fb1-93e6-281ffe92ab2a.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/homse/581b427e-e028-42b1-965c-70fe0dd82e6c.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/homse/c12db2d8-e8db-42d9-8ad4-af849458a6d8.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/homse/346c70c8-385a-4ccd-aea0-087587ec9ba7.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/homse/09e0ed97-73c9-4fb1-93e6-281ffe92ab2a.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/homse/581b427e-e028-42b1-965c-70fe0dd82e6c.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/homse/c12db2d8-e8db-42d9-8ad4-af849458a6d8.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/homse/346c70c8-385a-4ccd-aea0-087587ec9ba7.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/homse/09e0ed97-73c9-4fb1-93e6-281ffe92ab2a.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/homse/581b427e-e028-42b1-965c-70fe0dd82e6c.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/homse/c12db2d8-e8db-42d9-8ad4-af849458a6d8.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/homse/346c70c8-385a-4ccd-aea0-087587ec9ba7.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/homse/09e0ed97-73c9-4fb1-93e6-281ffe92ab2a.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("/homse/581b427e-e028-42b1-965c-70fe0dd82e6c.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("/homse/c12db2d8-e8db-42d9-8ad4-af849458a6d8.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("/homse/346c70c8-385a-4ccd-aea0-087587ec9ba7.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("/homse/09e0ed97-73c9-4fb1-93e6-281ffe92ab2a.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style>
+<style>
+body{margin:0;font-family:"Plus Jakarta Sans","Segoe UI",system-ui,sans-serif;color:#0F172A;background:#ffffff;-webkit-font-smoothing:antialiased}
+a{color:#4338CA;text-decoration:none}a:hover{color:#3730A3}
+@keyframes homseFloat{0%,100%{translate:0 0}50%{translate:0 -10px}}
+</style>
+</helmet>
+<div style="width: 1440px; height: 5640px; display: flex; flex-direction: column; background: #ffffff; overflow: hidden">
+
+<!-- ============ HERO (dark) ============ -->
+<section id="top" style="position: relative; flex-shrink: 0; height: 920px; background: #0F172A; color: #ffffff; overflow: hidden">
+
+<!-- background geometry: faint arches from the "h" -->
+<div style="position: absolute; right: -120px; top: 120px; width: 620px; height: 900px; border-radius: 310px 310px 0 0; border: 2px solid rgba(165, 180, 252, 0.14)"></div>
+<div style="position: absolute; right: -40px; top: 200px; width: 460px; height: 800px; border-radius: 230px 230px 0 0; border: 2px solid rgba(165, 180, 252, 0.10)"></div>
+<div style="position: absolute; left: -180px; bottom: -260px; width: 520px; height: 520px; border-radius: 50%; background: rgba(79, 70, 229, 0.22)"></div>
+
+<header style="position: relative; height: 96px; display: flex; align-items: center; justify-content: space-between; padding: 0 120px">
+<a href="#top" aria-label="Homse home" style="display: flex; align-items: center"><img src="/homse/ba105a58-5ee7-4894-bcd0-ca000298a08b.png" alt="Homse" style="height: 36px; width: auto; display: block"></a>
+<nav style="display: flex; align-items: center; gap: 8px; padding: 6px; border-radius: 999px; background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.1); font-size: 15px; font-weight: 600">
+<a href="#services" style="display: flex; align-items: center; height: 40px; padding: 0 18px; border-radius: 999px; color: #E2E8F0">Services</a>
+<a href="#how" style="display: flex; align-items: center; height: 40px; padding: 0 18px; border-radius: 999px; color: #E2E8F0">How it works</a>
+<a href="#pro" style="display: flex; align-items: center; height: 40px; padding: 0 18px; border-radius: 999px; color: #E2E8F0">For professionals</a>
+</nav>
+<a href="#app" style="display: flex; align-items: center; height: 48px; padding: 0 24px; border-radius: 999px; background: #ffffff; color: #0F172A; font-size: 15px; font-weight: 700">Get the app</a>
+</header>
+
+<div style="position: relative; display: grid; grid-template-columns: 700px minmax(0, 1fr); gap: 40px; padding: 72px 120px 0">
+<div style="display: flex; flex-direction: column; gap: 32px">
+<div style="align-self: flex-start; display: flex; align-items: center; gap: 10px; height: 36px; padding: 0 16px 0 6px; border-radius: 999px; background: rgba(99, 102, 241, 0.18); color: #C7D2FE; font-size: 14px; font-weight: 600">
+<span style="height: 26px; padding: 0 10px; border-radius: 999px; background: #6366F1; color: #ffffff; font-size: 12px; font-weight: 700; display: flex; align-items: center">New</span>
+<span>Now live in Chandigarh Tricity</span>
+</div>
+<h1 style="margin: 0; font-size: 84px; line-height: 1; font-weight: 800; letter-spacing: -0.045em">Leaky tap?<br>Dusty AC?<br>Consider it <span style="display: inline-block; margin-top: 8px; padding: 0 22px 8px; border-radius: 28px 28px 28px 6px; background: #4F46E5; font-style: italic">handled.</span></h1>
+<p style="margin: 0; font-size: 20px; line-height: 1.55; color: #CBD5E1; max-width: 540px; text-wrap: pretty">Homse brings verified professionals to your door — for cleaning, salon, repairs and appliances. Upfront prices, and you pay only after the job’s done.</p>
+<div style="display: flex; gap: 14px; align-items: center">
+<a href="#app" style="display: flex; align-items: center; gap: 10px; height: 60px; padding: 0 28px; border-radius: 999px; background: #ffffff; color: #0F172A; font-size: 16px; font-weight: 700">Download the app<svg width="18" height="18" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+<a href="#pro" style="display: flex; align-items: center; height: 60px; padding: 0 28px; border-radius: 999px; border: 1.5px solid rgba(255, 255, 255, 0.3); color: #ffffff; font-size: 16px; font-weight: 700">I'm a professional</a>
+</div>
+</div>
+
+<!-- hero composition -->
+<div style="position: relative; height: 700px">
+<div style="position: absolute; left: 50px; top: 20px; width: 380px; height: 600px; border-radius: 190px 190px 32px 32px; background: #4F46E5; overflow: hidden">
+<div style="position: absolute; left: 40px; top: 40px; width: 300px; height: 520px; border-radius: 150px 150px 20px 20px; background: #6366F1"></div>
+</div>
+<div style="position: absolute; left: 100px; top: 60px; width: 280px; height: 590px; border-radius: 46px; background: #020617; padding: 9px; box-sizing: border-box; box-shadow: 0 50px 80px -30px rgba(0, 0, 0, 0.8)">
+<img src="/homse/7683fb3a-419b-413d-b1d8-0441bd20143f.jpeg" alt="Homse app home screen showing service categories and most booked services" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: top; border-radius: 38px">
+</div>
+<div style="position: absolute; left: 0; top: 380px; width: 120px; height: 180px; border-radius: 60px 60px 16px 16px; background: #3B9BFF"></div>
+<div style="position: absolute; left: 380px; top: 30px; width: 72px; height: 72px; border-radius: 50%; background: #8B5CF6"></div>
+
+<div style="position: absolute; left: 0; top: 110px; rotate: -7deg; animation: homseFloat 6s ease-in-out infinite; display: flex; align-items: center; gap: 10px; padding: 12px 18px 12px 12px; border-radius: 18px; background: #ffffff; color: #0F172A; box-shadow: 0 18px 40px -12px rgba(0, 0, 0, 0.45)">
+<span style="width: 38px; height: 38px; border-radius: 12px; background: #E0F2FE; color: #0369A1; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12h20"></path><path d="M12 2v20"></path><path d="m20 16-4-4 4-4"></path><path d="m4 8 4 4-4 4"></path><path d="m16 4-4 4-4-4"></path><path d="m8 20 4-4 4 4"></path></svg></span>
+<span style="font-size: 15px; font-weight: 700">AC service</span>
+</div>
+<div style="position: absolute; left: 330px; top: 200px; rotate: 6deg; animation: homseFloat 7s ease-in-out infinite; display: flex; align-items: center; gap: 10px; padding: 12px 18px 12px 12px; border-radius: 18px; background: #ffffff; color: #0F172A; box-shadow: 0 18px 40px -12px rgba(0, 0, 0, 0.45)">
+<span style="width: 38px; height: 38px; border-radius: 12px; background: #EEF2FF; color: #4F46E5; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 5.8L20 11l-6.1 2.2L12 19l-1.9-5.8L4 11l6.1-2.2z"></path><path d="M19 3v4"></path><path d="M21 5h-4"></path></svg></span>
+<span style="font-size: 15px; font-weight: 700">Deep cleaning</span>
+</div>
+<div style="position: absolute; left: 320px; top: 470px; rotate: -4deg; animation: homseFloat 5.5s ease-in-out infinite; display: flex; align-items: center; gap: 10px; padding: 12px 18px 12px 12px; border-radius: 18px; background: #ffffff; color: #0F172A; box-shadow: 0 18px 40px -12px rgba(0, 0, 0, 0.45)">
+<span style="width: 38px; height: 38px; border-radius: 12px; background: #FCE7F3; color: #BE185D; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><path d="M20 4 8.12 15.88"></path><path d="M14.47 14.48 20 20"></path><path d="M8.12 8.12 12 12"></path></svg></span>
+<span style="font-size: 15px; font-weight: 700">Salon at home</span>
+</div>
+<div style="position: absolute; left: 20px; top: 590px; rotate: 3deg; display: flex; align-items: center; gap: 10px; padding: 12px 18px 12px 12px; border-radius: 18px; background: #FEF3C7; color: #0F172A; box-shadow: 0 18px 40px -12px rgba(0, 0, 0, 0.45)">
+<span style="width: 38px; height: 38px; border-radius: 12px; background: #ffffff; color: #B45309; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg></span>
+<span style="font-size: 15px; font-weight: 700">Verified pro</span>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ============ MARQUEE BAND ============ -->
+<section aria-label="Services we offer" style="position: relative; flex-shrink: 0; height: 150px; background: #ffffff">
+<div style="position: absolute; left: -60px; top: 34px; width: 1560px; height: 84px; rotate: -2deg; background: #6366F1; color: #ffffff; display: flex; align-items: center; justify-content: center; gap: 28px; font-size: 30px; font-weight: 800; letter-spacing: -0.01em; white-space: nowrap">
+<span>Cleaning</span><svg width="22" height="22" sc-camel-view-box="0 0 24 24" fill="#C7D2FE" aria-hidden="true"><path d="M12 0l3 9 9 3-9 3-3 9-3-9-9-3 9-3z"></path></svg>
+<span>AC repair</span><svg width="22" height="22" sc-camel-view-box="0 0 24 24" fill="#C7D2FE" aria-hidden="true"><path d="M12 0l3 9 9 3-9 3-3 9-3-9-9-3 9-3z"></path></svg>
+<span>Electrician</span><svg width="22" height="22" sc-camel-view-box="0 0 24 24" fill="#C7D2FE" aria-hidden="true"><path d="M12 0l3 9 9 3-9 3-3 9-3-9-9-3 9-3z"></path></svg>
+<span>Plumbing</span><svg width="22" height="22" sc-camel-view-box="0 0 24 24" fill="#C7D2FE" aria-hidden="true"><path d="M12 0l3 9 9 3-9 3-3 9-3-9-9-3 9-3z"></path></svg>
+<span>Carpentry</span><svg width="22" height="22" sc-camel-view-box="0 0 24 24" fill="#C7D2FE" aria-hidden="true"><path d="M12 0l3 9 9 3-9 3-3 9-3-9-9-3 9-3z"></path></svg>
+<span>Painting</span><svg width="22" height="22" sc-camel-view-box="0 0 24 24" fill="#C7D2FE" aria-hidden="true"><path d="M12 0l3 9 9 3-9 3-3 9-3-9-9-3 9-3z"></path></svg>
+<span>Pest control</span><svg width="22" height="22" sc-camel-view-box="0 0 24 24" fill="#C7D2FE" aria-hidden="true"><path d="M12 0l3 9 9 3-9 3-3 9-3-9-9-3 9-3z"></path></svg>
+<span>Salon &amp; spa</span>
+</div>
+</section>
+
+<!-- ============ SERVICES BENTO ============ -->
+<section id="services" style="flex-shrink: 0; display: flex; flex-direction: column; gap: 56px; padding: 90px 120px 120px">
+<div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 48px">
+<h2 style="margin: 0; font-size: 60px; line-height: 1.02; font-weight: 800; letter-spacing: -0.04em; max-width: 720px">Everything your home needs. <span style="color: #6366F1">One app.</span></h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.55; color: #475569; max-width: 380px">From a quick fix to a full-home refresh — pick the job, pick the time, and we’ll send the right pro.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); grid-template-rows: repeat(2, 270px); gap: 20px">
+
+<div style="grid-column: span 2; grid-row: span 2; position: relative; overflow: hidden; border-radius: 36px; background: #4F46E5; color: #ffffff; padding: 36px; box-sizing: border-box; display: flex; flex-direction: column; gap: 24px">
+<div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 24px">
+<div style="display: flex; flex-direction: column; gap: 12px; max-width: 360px">
+<div style="font-size: 40px; line-height: 1.05; font-weight: 800; letter-spacing: -0.03em">Home cleaning</div>
+<div style="font-size: 16px; line-height: 1.5; color: #E0E7FF">Kitchens, bathrooms, sofas and full-home deep cleans.</div>
+</div>
+<div style="width: 64px; height: 64px; flex-shrink: 0; border-radius: 32px 32px 14px 14px; background: #ffffff; color: #4F46E5; display: flex; align-items: center; justify-content: center"><svg width="30" height="30" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 5.8L20 11l-6.1 2.2L12 19l-1.9-5.8L4 11l6.1-2.2z"></path><path d="M19 3v4"></path><path d="M21 5h-4"></path></svg></div>
+</div>
+<img src="/homse/9223a9f8-b9cb-4ce3-af39-2f14b31122ca.jpeg" alt="Homse cleaner mopping a bright living room" style="flex-grow: 1; min-height: 0; width: 100%; object-fit: cover; object-position: center 40%; border-radius: 200px 200px 24px 24px; border: 6px solid #6366F1; box-sizing: border-box">
+</div>
+
+<div style="position: relative; overflow: hidden; border-radius: 32px; background: #E0F2FE; padding: 32px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between">
+<img src="/homse/fe1421d2-9bf0-4e21-a8c9-e61b031a2545.jpeg" alt="Technician servicing an outdoor AC unit" style="position: absolute; right: 22px; top: 22px; width: 124px; height: 146px; object-fit: cover; border-radius: 56px 56px 16px 16px; border: 4px solid #ffffff">
+<div style="width: 56px; height: 56px; border-radius: 28px 28px 12px 12px; background: #ffffff; color: #0369A1; display: flex; align-items: center; justify-content: center"><svg width="26" height="26" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12h20"></path><path d="M12 2v20"></path><path d="m20 16-4-4 4-4"></path><path d="m4 8 4 4-4 4"></path><path d="m16 4-4 4-4-4"></path><path d="m8 20 4-4 4 4"></path></svg></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><div style="font-size: 24px; font-weight: 800; letter-spacing: -0.02em">AC &amp; appliances</div><div style="font-size: 15px; color: #075985">Service, repair, install</div></div>
+</div>
+
+<div style="position: relative; overflow: hidden; border-radius: 32px; background: #FEF3C7; padding: 32px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between">
+<img src="/homse/3e2aa449-2c77-4cfe-ba67-b5eb0a9de01f.jpeg" alt="Electrician working on a switchboard" style="position: absolute; right: 22px; top: 22px; width: 124px; height: 146px; object-fit: cover; border-radius: 62px 62px 16px 16px; border: 4px solid #ffffff">
+<div style="width: 56px; height: 56px; border-radius: 28px 28px 12px 12px; background: #ffffff; color: #B45309; display: flex; align-items: center; justify-content: center"><svg width="26" height="26" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"></path></svg></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><div style="font-size: 24px; font-weight: 800; letter-spacing: -0.02em">Electrician</div><div style="font-size: 15px; color: #92400E">Wiring, fans, lights, switches</div></div>
+</div>
+
+<div style="grid-column: span 2; position: relative; overflow: hidden; border-radius: 32px; background: #FCE7F3; padding: 32px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between">
+<img src="/homse/37575579-4a5a-4b7c-b073-605c473fad4d.jpeg" alt="Facial treatment at home" style="position: absolute; right: 32px; bottom: 0; width: 240px; height: 236px; object-fit: cover; object-position: 30% center; border-radius: 120px 120px 0 0; border: 6px solid #FBCFE8; border-bottom: 0; box-sizing: border-box">
+<div style="position: relative; width: 56px; height: 56px; border-radius: 28px 28px 12px 12px; background: #ffffff; color: #BE185D; display: flex; align-items: center; justify-content: center"><svg width="26" height="26" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><path d="M20 4 8.12 15.88"></path><path d="M14.47 14.48 20 20"></path><path d="M8.12 8.12 12 12"></path></svg></div>
+<div style="position: relative; display: flex; flex-direction: column; gap: 6px; max-width: 300px"><div style="font-size: 28px; font-weight: 800; letter-spacing: -0.02em">Salon &amp; spa at home</div><div style="font-size: 15px; color: #9D174D">Haircuts, facials, waxing and massages</div></div>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 20px">
+<div style="font-size: 15px; font-weight: 700; color: #475569; letter-spacing: 0.08em; text-transform: uppercase">Also on Homse</div>
+<div style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 20px">
+<div style="display: flex; flex-direction: column; gap: 12px; padding: 10px 10px 16px; border-radius: 26px; background: #EEF2FF">
+<img src="/homse/7142bf7c-829e-42ac-bead-f5e28f67ef80.jpeg" alt="Barber trimming a beard" style="width: 100%; height: 150px; object-fit: cover; border-radius: 80px 80px 16px 16px; display: block">
+<div style="padding: 0 8px; font-size: 17px; font-weight: 800; letter-spacing: -0.01em">Men’s grooming</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px; padding: 10px 10px 16px; border-radius: 26px; background: #E0F2FE">
+<img src="/homse/4564a589-abad-40b8-a966-159ca104877f.jpeg" alt="Plumber fixing a pipe" style="width: 100%; height: 150px; object-fit: cover; border-radius: 80px 80px 16px 16px; display: block">
+<div style="padding: 0 8px; font-size: 17px; font-weight: 800; letter-spacing: -0.01em">Plumbing</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px; padding: 10px 10px 16px; border-radius: 26px; background: #FEF3C7">
+<img src="/homse/fdf270fd-5217-4e45-a09a-1470aca4220d.jpeg" alt="Carpenter at work" style="width: 100%; height: 150px; object-fit: cover; border-radius: 80px 80px 16px 16px; display: block">
+<div style="padding: 0 8px; font-size: 17px; font-weight: 800; letter-spacing: -0.01em">Carpentry</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px; padding: 10px 10px 16px; border-radius: 26px; background: #EDE9FE">
+<img src="/homse/0adb42a0-f40e-448d-9a3f-a1fc560a01dc.jpeg" alt="Painter rolling a wall" style="width: 100%; height: 150px; object-fit: cover; border-radius: 80px 80px 16px 16px; display: block">
+<div style="padding: 0 8px; font-size: 17px; font-weight: 800; letter-spacing: -0.01em">Painting</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px; padding: 10px 10px 16px; border-radius: 26px; background: #DCFCE7">
+<img src="/homse/529fadaa-5c90-4dd7-ac38-861ca006207f.jpeg" alt="Pest control fogging indoors" style="width: 100%; height: 150px; object-fit: cover; border-radius: 80px 80px 16px 16px; display: block">
+<div style="padding: 0 8px; font-size: 17px; font-weight: 800; letter-spacing: -0.01em">Pest control</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section id="how" style="flex-shrink: 0; margin: 0 40px; padding: 110px 80px; border-radius: 48px; background: #F5F3FF; display: flex; flex-direction: column; gap: 64px">
+<div style="display: flex; flex-direction: column; gap: 14px; align-items: center; text-align: center">
+<div style="font-size: 14px; font-weight: 700; color: #6D28D9; letter-spacing: 0.1em; text-transform: uppercase">How it works</div>
+<h2 style="margin: 0; font-size: 56px; line-height: 1.04; font-weight: 800; letter-spacing: -0.04em">Three taps to a sorted home</h2>
+</div>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px">
+<div style="display: flex; flex-direction: column; gap: 24px">
+<div style="position: relative; height: 430px; border-radius: 215px 215px 28px 28px; background: #ffffff; overflow: hidden">
+<div style="position: absolute; left: 50%; top: 56px; translate: -50% 0; width: 250px; height: 520px; border-radius: 40px; background: #020617; padding: 8px; box-sizing: border-box; box-shadow: 0 30px 50px -24px rgba(76, 29, 149, 0.5)">
+<img src="/homse/029d72f3-10c9-47f8-86b8-40fe80c5a9a6.jpeg" alt="Homse app explore screen listing services with prices" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: top; border-radius: 33px">
+</div>
+</div>
+<div style="display: flex; gap: 16px; align-items: flex-start">
+<div style="width: 56px; height: 56px; flex-shrink: 0; border-radius: 28px 28px 12px 12px; background: #ffffff; box-shadow: 0 10px 24px -12px rgba(76, 29, 149, 0.45); display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: 800; font-style: italic; color: #4F46E5; letter-spacing: -0.03em">01</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<div style="font-size: 22px; font-weight: 800; letter-spacing: -0.02em">Find what you need</div>
+<div style="font-size: 16px; line-height: 1.55; color: #475569">Cleaning, salon, repairs and more — with clear prices and offers.</div>
+</div>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 24px">
+<div style="position: relative; height: 430px; border-radius: 215px 215px 28px 28px; background: #ffffff; overflow: hidden">
+<div style="position: absolute; left: 50%; top: 56px; translate: -50% 0; width: 250px; height: 520px; border-radius: 40px; background: #020617; padding: 8px; box-sizing: border-box; box-shadow: 0 30px 50px -24px rgba(76, 29, 149, 0.5)">
+<img src="/homse/4b104ed9-dd15-4b3f-b81e-66f46b5028f0.jpeg" alt="Homse app service page for Radiance Facial at Home, showing what is included" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: top; border-radius: 33px">
+</div>
+</div>
+<div style="display: flex; gap: 16px; align-items: flex-start">
+<div style="width: 56px; height: 56px; flex-shrink: 0; border-radius: 28px 28px 12px 12px; background: #ffffff; box-shadow: 0 10px 24px -12px rgba(76, 29, 149, 0.45); display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: 800; font-style: italic; color: #4F46E5; letter-spacing: -0.03em">02</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<div style="font-size: 22px; font-weight: 800; letter-spacing: -0.02em">Know what’s included</div>
+<div style="font-size: 16px; line-height: 1.55; color: #475569">Every service shows what’s included — and what isn’t — before you book.</div>
+</div>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 24px">
+<div style="position: relative; height: 430px; border-radius: 215px 215px 28px 28px; background: #ffffff; overflow: hidden">
+<div style="position: absolute; left: 50%; top: 56px; translate: -50% 0; width: 250px; height: 520px; border-radius: 40px; background: #020617; padding: 8px; box-sizing: border-box; box-shadow: 0 30px 50px -24px rgba(76, 29, 149, 0.5)">
+<img src="/homse/9b66272f-0633-418a-8a3d-774b01de9651.jpeg" alt="Homse app slot picker with dates and time slots" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: top; border-radius: 33px">
+</div>
+</div>
+<div style="display: flex; gap: 16px; align-items: flex-start">
+<div style="width: 56px; height: 56px; flex-shrink: 0; border-radius: 28px 28px 12px 12px; background: #4F46E5; box-shadow: 0 10px 24px -12px rgba(76, 29, 149, 0.45); display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: 800; font-style: italic; color: #ffffff; letter-spacing: -0.03em">03</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<div style="font-size: 22px; font-weight: 800; letter-spacing: -0.02em">Pick a slot. Pay after.</div>
+<div style="font-size: 16px; line-height: 1.55; color: #475569">Choose a time that suits you and pay only once the job is done.</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ============ FOR PROFESSIONALS (dark, matches the pro app) ============ -->
+<section id="pro" style="flex-shrink: 0; position: relative; overflow: hidden; margin: 120px 40px 0; padding: 110px 80px; border-radius: 48px; background: #0E0D0C; color: #ffffff; display: grid; grid-template-columns: minmax(0, 1fr) 600px; gap: 48px; align-items: center">
+<div style="position: absolute; right: -140px; top: -160px; width: 760px; height: 1100px; border-radius: 380px 380px 0 0; border: 2px solid rgba(217, 119, 87, 0.16)"></div>
+<div style="position: absolute; right: 20px; top: 40px; width: 480px; height: 900px; border-radius: 240px 240px 0 0; background: rgba(95, 184, 130, 0.07)"></div>
+<div style="position: relative; display: flex; flex-direction: column; gap: 28px">
+<div style="align-self: flex-start; display: flex; align-items: center; gap: 10px; height: 36px; padding: 0 16px; border-radius: 999px; background: rgba(217, 119, 87, 0.16); color: #F0A488; font-size: 14px; font-weight: 700"><span style="width: 8px; height: 8px; border-radius: 50%; background: #6FCF97"></span>Homse for professionals</div>
+<h2 style="margin: 0; font-size: 64px; line-height: 1; font-weight: 800; letter-spacing: -0.045em">Your skills.<br>Your hours.<br><span style="color: #D98160; font-style: italic">Your earnings.</span></h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.6; color: #D6D3D1; max-width: 520px">Cleaners, beauticians, electricians, AC technicians — go online when you want, get jobs near you, and see exactly what you take home on every job.</p>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px">
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 22px; border-radius: 22px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.08)">
+<div style="width: 40px; height: 40px; border-radius: 20px 20px 10px 10px; background: rgba(95, 184, 130, 0.16); color: #6FCF97; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v10"></path><path d="M18.4 6.6a9 9 0 1 1-12.77.04"></path></svg></div>
+<div style="font-size: 17px; font-weight: 700; color: #ffffff">Go online when you want</div>
+<div style="font-size: 14px; line-height: 1.5; color: #A8A29E">Flip one switch to start receiving job requests.</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 22px; border-radius: 22px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.08)">
+<div style="width: 40px; height: 40px; border-radius: 20px 20px 10px 10px; background: rgba(95, 184, 130, 0.16); color: #6FCF97; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="6" width="20" height="14" rx="3"></rect><path d="M16 13h.01"></path><path d="M2 10h20"></path></svg></div>
+<div style="font-size: 17px; font-weight: 700; color: #ffffff">Know your earnings upfront</div>
+<div style="font-size: 14px; line-height: 1.5; color: #A8A29E">Every service shows what you earn after the platform fee.</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 22px; border-radius: 22px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.08)">
+<div style="width: 40px; height: 40px; border-radius: 20px 20px 10px 10px; background: rgba(95, 184, 130, 0.16); color: #6FCF97; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></div>
+<div style="font-size: 17px; font-weight: 700; color: #ffffff">Only the jobs you choose</div>
+<div style="font-size: 14px; line-height: 1.5; color: #A8A29E">Switch on the services you offer — you’re only sent those.</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 22px; border-radius: 22px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.08)">
+<div style="width: 40px; height: 40px; border-radius: 20px 20px 10px 10px; background: rgba(95, 184, 130, 0.16); color: #6FCF97; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18"></path><path d="M5 21V10"></path><path d="M19 21V10"></path><path d="M12 3 3 8h18z"></path><path d="M9 21v-7"></path><path d="M15 21v-7"></path></svg></div>
+<div style="font-size: 17px; font-weight: 700; color: #ffffff">Paid to your bank</div>
+<div style="font-size: 14px; line-height: 1.5; color: #A8A29E">Track every payout and withdraw what you’ve earned.</div>
+</div>
+</div>
+<a href="#pro" style="align-self: flex-start; margin-top: 6px; display: flex; align-items: center; gap: 10px; height: 60px; padding: 0 28px; border-radius: 999px; background: #D98160; color: #1C1917; font-size: 16px; font-weight: 800">Join as a professional<svg width="18" height="18" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+</div>
+<div style="position: relative; height: 720px">
+<div style="position: absolute; left: 0px; top: 110px; rotate: -8deg; z-index: 1; width: 250px; height: 520px; border-radius: 44px; background: #2A2A2A; padding: 8px; box-sizing: border-box; box-shadow: 0 50px 80px -30px rgba(0, 0, 0, 0.9)">
+<img src="/homse/eb0ff1f2-257f-4322-87b6-f98f25829018.jpeg" alt="Homse pro app: My services, showing what the professional earns per job" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: top; border-radius: 36px">
+</div>
+<div style="position: absolute; left: 340px; top: 80px; rotate: 8deg; z-index: 1; width: 250px; height: 520px; border-radius: 44px; background: #2A2A2A; padding: 8px; box-sizing: border-box; box-shadow: 0 50px 80px -30px rgba(0, 0, 0, 0.9)">
+<img src="/homse/6bbdcf9b-9a87-4b6a-85d4-70628e1df710.jpeg" alt="Homse pro app: Today screen with online switch and earnings" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: top; border-radius: 36px">
+</div>
+<div style="position: absolute; left: 160px; top: 20px; rotate: 0deg; z-index: 2; width: 290px; height: 603px; border-radius: 44px; background: #2A2A2A; padding: 8px; box-sizing: border-box; box-shadow: 0 50px 80px -30px rgba(0, 0, 0, 0.9)">
+<img src="/homse/30ee4f73-5673-4b1f-ad1e-eb6ed8095f8b.jpeg" alt="Homse pro app: Earnings screen with weekly chart and withdraw button" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: top; border-radius: 36px">
+</div>
+</div>
+</section>
+
+<!-- ============ GET THE APP ============ -->
+<section id="app" style="flex-shrink: 0; padding: 60px 120px 140px">
+<div style="position: relative; height: 480px; border-radius: 48px; background: #4F46E5; color: #ffffff; overflow: hidden; display: grid; grid-template-columns: minmax(0, 1fr) 460px; padding: 0 80px; box-sizing: border-box">
+<div style="position: absolute; right: -80px; top: -120px; width: 520px; height: 520px; border-radius: 50%; border: 2px solid rgba(255, 255, 255, 0.14)"></div>
+<div style="position: absolute; right: 60px; bottom: -200px; width: 380px; height: 380px; border-radius: 50%; background: rgba(255, 255, 255, 0.08)"></div>
+<div style="position: relative; display: flex; flex-direction: column; justify-content: center; gap: 24px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1; font-weight: 800; letter-spacing: -0.045em">Your home,<br><span style="font-style: italic">sorted.</span></h2>
+<p style="margin: 0; font-size: 19px; line-height: 1.55; color: #E0E7FF; max-width: 460px">Get the Homse app to book services, track your pro and manage every visit.</p>
+<div style="display: flex; gap: 12px">
+<a href="#app" style="display: flex; align-items: center; gap: 10px; height: 58px; padding: 0 24px; border-radius: 999px; background: #0F172A; color: #ffffff; font-size: 15px; font-weight: 700"><svg width="20" height="20" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="3"></rect><path d="M12 18h.01"></path></svg>Download for iPhone</a>
+<a href="#app" style="display: flex; align-items: center; gap: 10px; height: 58px; padding: 0 24px; border-radius: 999px; background: #ffffff; color: #0F172A; font-size: 15px; font-weight: 700"><svg width="20" height="20" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="3"></rect><path d="M12 18h.01"></path></svg>Download for Android</a>
+</div>
+</div>
+<div style="position: relative">
+<div style="position: absolute; left: 90px; top: 50px; rotate: 7deg; width: 290px; height: 610px; border-radius: 46px; background: #020617; padding: 9px; box-sizing: border-box; box-shadow: 0 40px 60px -20px rgba(15, 23, 42, 0.6)">
+<img src="/homse/7683fb3a-419b-413d-b1d8-0441bd20143f.jpeg" alt="Homse app home screen" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: top; border-radius: 38px">
+</div>
+</div>
+</div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer style="flex-grow: 1; position: relative; overflow: hidden; background: #0F172A; color: #ffffff; display: flex; flex-direction: column; gap: 40px; padding: 72px 120px 0">
+<div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 48px">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<img src="/homse/ba105a58-5ee7-4894-bcd0-ca000298a08b.png" alt="Homse" style="height: 32px; width: auto; align-self: flex-start">
+<span style="font-size: 15px; color: #94A3B8">Home services, done right.</span>
+</div>
+<nav style="display: flex; gap: 36px; font-size: 15px; font-weight: 600">
+<a href="#top" style="color: #CBD5E1">About</a>
+<a href="#top" style="color: #CBD5E1">Contact</a>
+<a href="#top" style="color: #CBD5E1">Terms</a>
+<a href="#top" style="color: #CBD5E1">Privacy</a>
+</nav>
+</div>
+<div style="display: flex; justify-content: space-between; padding-top: 24px; border-top: 1px solid #1E293B; font-size: 14px; color: #94A3B8"><span>© 2026 Homse. All rights reserved.</span><span>[Contact email / phone]</span></div>
+<div aria-hidden="true" style="margin-top: auto; font-size: 380px; line-height: 0.72; font-weight: 800; letter-spacing: -0.06em; color: #1E293B; text-align: center; white-space: nowrap">homse</div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script="" data-props="{&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#4F46E5&quot;,&quot;options&quot;:[&quot;#4F46E5&quot;,&quot;#6366F1&quot;,&quot;#7C3AED&quot;,&quot;#0F172A&quot;]},&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:5640}}">
+class Component extends DCLogic {
+  renderVals() {
+    return { accent: this.props.accent ?? '#4F46E5' };
+  }
+}
+</script>
+
+
+</body></html>

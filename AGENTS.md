@@ -8,3 +8,5 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Preserve the supplied Homse page as a self-contained static design embedded by the TanStack home route, because the uploaded artifact is the visual source of truth.
