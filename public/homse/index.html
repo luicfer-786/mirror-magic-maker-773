@@ -3,7 +3,55 @@
 <meta charset="utf-8">
 <title>Homse — Landing page</title>
 
-</head>
+<style>
+@media (max-width: 767px) {
+  body { overflow-x: hidden; }
+  section#top { height: auto !important; min-height: 840px; }
+  section#top > header { padding: 0 24px !important; height: 76px !important; }
+  section#top > header img { height: 30px !important; }
+  section#top > header nav { display: none !important; }
+  section#top > header > a:last-child { height: 40px !important; padding: 0 15px !important; font-size: 12px !important; }
+  section#top > div:last-child { display: flex !important; flex-direction: column !important; gap: 20px !important; padding: 48px 24px 0 !important; }
+  section#top h1 { font-size: clamp(43px, 11vw, 58px) !important; }
+  section#top p { font-size: 16px !important; }
+  section#top h1 + p { max-width: 100% !important; }
+  section#top > div:last-child > div:first-child { gap: 24px !important; }
+  section#top > div:last-child > div:first-child > div:last-child { flex-wrap: wrap !important; gap: 10px !important; }
+  section#top > div:last-child > div:first-child > div:last-child a { height: 48px !important; padding: 0 16px !important; font-size: 12px !important; }
+  section#top > div:last-child > div:last-child { width: 600px !important; height: 410px !important; transform: scale(.60); transform-origin: top left; left: calc(50% - 180px); }
+  section#top > div:last-child > div:last-child > div { top: 0 !important; }
+  section#top > div:last-child > div:last-child > div:nth-child(n+3) { display: none !important; }
+  section:nth-of-type(2) { height: 100px !important; }
+  section:nth-of-type(2) > div { top: 20px !important; }
+  section#services { padding: 58px 24px 80px !important; gap: 36px !important; }
+  section#services > div:first-child { display: block !important; }
+  section#services h2 { font-size: 38px !important; margin-bottom: 20px !important; }
+  section#services > div:nth-child(2) { grid-template-columns: repeat(2,minmax(0,1fr)) !important; grid-template-rows: 350px 210px 220px !important; gap: 12px !important; }
+  section#services > div:nth-child(2) > div { border-radius: 22px !important; padding: 20px !important; }
+  section#services > div:nth-child(2) > div:first-child { grid-column: span 2 !important; grid-row: span 1 !important; }
+  section#services > div:nth-child(2) > div:last-child { grid-column: span 2 !important; }
+  section#services > div:nth-child(2) h3 { font-size: 22px !important; }
+  section#services > div:nth-child(2) p { font-size: 12px !important; }
+  section#services > div:last-child > div:last-child { grid-template-columns: repeat(2,minmax(0,1fr)) !important; gap: 12px !important; }
+  section#how { margin: 0 12px !important; padding: 64px 20px !important; border-radius: 28px !important; gap: 36px !important; }
+  section#how h2 { font-size: 38px !important; }
+  section#how > div:last-child { grid-template-columns: 1fr !important; gap: 48px !important; }
+  section#how > div:last-child > div { min-width: 0 !important; }
+  section#pro { margin: 60px 12px 0 !important; padding: 64px 24px !important; border-radius: 28px !important; display: block !important; }
+  section#pro h2 { font-size: 44px !important; }
+  section#pro > div:nth-last-child(2) > div:nth-last-child(2) { grid-template-columns: 1fr !important; }
+  section#pro > div:last-child { display: none !important; }
+  section#app { padding: 60px 12px 80px !important; }
+  section#app > div { height: auto !important; min-height: 460px; padding: 48px 24px !important; border-radius: 28px !important; display: block !important; }
+  section#app h2 { font-size: 44px !important; }
+  section#app > div > div:last-child { display: none !important; }
+  section#app a { padding: 0 16px !important; height: 48px !important; font-size: 12px !important; }
+  footer { padding: 60px 24px 0 !important; gap: 28px !important; }
+  footer > div:first-child, footer > div:nth-child(2) { flex-wrap: wrap !important; gap: 24px !important; }
+  footer nav { flex-wrap: wrap !important; gap: 18px !important; }
+  footer > div:last-child { font-size: 110px !important; }
+}
+</style></head>
 <body>
 <x-dc>
 <helmet>
@@ -231,7 +279,7 @@ a{color:#4338CA;text-decoration:none}a:hover{color:#3730A3}
 @keyframes homseFloat{0%,100%{translate:0 0}50%{translate:0 -10px}}
 </style>
 </helmet>
-<div style="width: 1440px; height: 5640px; display: flex; flex-direction: column; background: #ffffff; overflow: hidden">
+<div style="width: 100%; max-width: 1440px; min-height: 100vh; display: flex; flex-direction: column; background: #ffffff; overflow: hidden">
 
 <!-- ============ HERO (dark) ============ -->
 <section id="top" style="position: relative; flex-shrink: 0; height: 920px; background: #0F172A; color: #ffffff; overflow: hidden">
